@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/profile"
+    tools:context=".Edit_profile_trainer">
+
+    <TextView
+        android:id="@+id/detailes_trainer_change"
+        android:layout_width="339dp"
+        android:layout_height="77dp"
+        android:background="#70705D5D"
+        android:fontFamily="@font/aclonica"
+        android:shadowColor="#9E1F1F"
+        android:text="change your details"
+        android:textColor="#33371B"
+        android:textSize="30sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.067"
+        tools:ignore="MissingConstraints" />
+
+    <EditText
+        android:id="@+id/new_password_trainer"
+        android:layout_width="284dp"
+        android:layout_height="59dp"
+        android:ems="10"
+        android:hint="New password"
+        android:inputType="textPersonName"
+        android:textColorHint="#131313"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.497"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.249" />
+
+    <EditText
+        android:id="@+id/new_city_trainer"
+        android:layout_width="280dp"
+        android:layout_height="54dp"
+        android:ems="10"
+        android:hint="New City"
+        android:inputType="textPersonName"
+        android:textColorHint="#0E0E0E"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.494"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.39" />
+
+    <EditText
+        android:id="@+id/new_phone_trainer"
+        android:layout_width="278dp"
+        android:layout_height="67dp"
+        android:ems="10"
+        android:hint="New phone"
+        android:inputType="textPersonName"
+        android:textColorHint="#070707"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.497"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.551" />
+
+    <Button
+        android:id="@+id/change_details_trainer"
+        android:layout_width="155dp"
+        android:layout_height="69dp"
+        android:text="save changes"
+        app:backgroundTint="#7A5E1919"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.747" />
+</androidx.constraintlayout.widget.ConstraintLayout>

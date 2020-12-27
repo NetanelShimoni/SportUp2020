@@ -1,0 +1,88 @@
+<resources>
+    <array name="Wight">
+        <item>30-40</item>
+        <item>40-50</item>
+        <item>50-60</item>
+        <item>60-70</item>
+        <item>70-80</item>
+        <item>80-90</item>
+        <item>90-100</item>
+        <item>100+</item>
+
+    </array>
+
+    <array name="trainer_Wight">
+        <item>ALL</item>
+        <item>30-40</item>
+        <item>40-50</item>
+        <item>50-60</item>
+        <item>60-70</item>
+        <item>70-80</item>
+        <item>80-90</item>
+        <item>90-100</item>
+        <item>100+</item>
+
+    </array>
+
+    <array name="high">
+        <item>130-140</item>
+        <item>140-150</item>
+        <item>150-160</item>
+        <item>160-170</item>
+        <item>170-180</item>
+        <item>180-190</item>
+        <item>190-200</item>
+        <item>200+</item>
+    </array>
+
+    <array name="trainer_high">
+        <item>ALL</item>
+        <item>130-140</item>
+        <item>140-150</item>
+        <item>150-160</item>
+        <item>160-170</item>
+        <item>170-180</item>
+        <item>180-190</item>
+        <item>190-200</item>
+        <item>200+</item>
+    </array>
+
+    <array name="museles">
+
+        <item>Six pack</item>
+        <item>Chest</item>
+        <item>Sulders</item>
+        <item>Legs</item>
+        <item>Triceps</item>
+        <item>Biceps</item>
+    </array>
+
+
+    <string name="app_name">SportUp</string>
+    <string name="name_app">MenuDemo</string>
+    <string name="settings">Settings</string>
+    <string name="ViewMeassge">View Meassge</string>
+    <string name="Edit_Profile">Edit Profile</string>
+
+    <string name="help">Help</string>
+    <string name="title_activity_test">MainActivity</string>
+    <string name="title_home">Home</string>
+    <string name="title_dashboard">Dashboard</string>
+    <string name="title_notifications">Notifications</string>
+    <string-array name="Discreption">
+        <item>Add abs exercises</item>
+        <item>Add chest exercises</item>
+        <item>Add Shoulders exercises</item>
+        <item>Add biceps exercises</item>
+        <item>Add Tricep exercises</item>
+        <item>Add legs exercises</item>
+    </string-array>
+    <string-array name="recycaleview">
+        <item>Six-pack</item>
+        <item>Chest</item>
+        <item>Shoulders</item>
+        <item>Biceps</item>
+        <item>Tricep</item>
+        <item>Legs</item>
+    </string-array>
+</resources>

@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/home_user"
+    android:orientation="vertical"
+    tools:context=".user_Home">
+
+    <TextView
+        android:id="@+id/welcome_user"
+        android:layout_width="370dp"
+        android:layout_height="107dp"
+        android:background="#70705D5D"
+        android:fontFamily="@font/aclonica"
+        android:shadowColor="#9E1F1F"
+        android:textColor="#D30606"
+        android:textSize="30sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.487"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.025" />
+
+    <Button
+        android:id="@+id/btnAddTitle3"
+        android:layout_width="424dp"
+        android:layout_height="53dp"
+        android:layout_margin="50dp"
+
+        android:background="@drawable/button_selector"
+        android:onClick="home_workout"
+        android:text="home training"
+        android:textStyle="bold|italic"
+        app:backgroundTint="@color/button_green"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.206" />
+
+    <Button
+        android:id="@+id/send_to_spicipic_trainer"
+        android:layout_width="424dp"
+        android:layout_height="53dp"
+        android:layout_margin="50dp"
+
+        android:background="@drawable/button_selector"
+        android:onClick="find_trainer"
+        android:text="find trainer"
+        android:textStyle="bold|italic"
+        app:backgroundTint="@color/button_green"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/btnAddTitle3"
+        app:layout_constraintVertical_bias="0.0" />
+
+    <Button
+        android:id="@+id/profil_trainer_bu"
+        android:layout_width="424dp"
+        android:layout_height="53dp"
+        android:layout_margin="50dp"
+
+        android:background="@drawable/button_selector"
+        android:onClick="edit_profile_user"
+        android:text="profile"
+        android:textStyle="bold|italic"
+        app:backgroundTint="@color/button_green"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/send_to_spicipic_trainer"
+        app:layout_constraintVertical_bias="0.0" />
+
+    <Button
+        android:id="@+id/findgroups_bu"
+        android:layout_width="424dp"
+        android:layout_height="53dp"
+        android:layout_margin="50dp"
+
+        android:background="@drawable/button_selector"
+        android:text="find groups training"
+        android:textStyle="bold|italic"
+        app:backgroundTint="@color/button_green"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/profil_trainer_bu"
+        app:layout_constraintVertical_bias="0.0" />
+
+    <Button
+        android:id="@+id/logout_bu"
+        android:layout_width="424dp"
+        android:layout_height="53dp"
+        android:layout_margin="50dp"
+
+        android:background="@drawable/button_selector"
+        android:onClick="mainActivity"
+        android:text="logout"
+        android:textStyle="bold|italic"
+        app:backgroundTint="#CBA51010"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/findgroups_bu"
+        app:layout_constraintVertical_bias="0.668" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

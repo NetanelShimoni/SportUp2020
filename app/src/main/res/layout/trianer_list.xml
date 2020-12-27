@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="411dp"
+        android:layout_height="274dp"
+        android:layout_margin="5dp"
+        android:background="#A51F1F"
+        app:cardBackgroundColor="#7E7D79"
+        app:cardCornerRadius="10dp"
+        app:cardElevation="10dp">
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="524dp"
+            android:layout_marginTop="25dp"
+            android:background="@drawable/bbb"
+            android:orientation="horizontal">
+
+            <!--            <ImageButton-->
+            <!--                android:id="@+id/imageview"-->
+            <!--                android:layout_width="206dp"-->
+            <!--                android:layout_height="149dp"-->
+            <!--                android:layout_margin="10dp"-->
+            <!--                android:src="@drawable/chest" />-->
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="292dp"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/name_trainer_for_found"
+                    android:layout_width="385dp"
+                    android:layout_height="46dp"
+                    android:layout_margin="10dp"
+                    android:text="Trainer Name"
+                    android:textColor="#FFF"
+                    android:textSize="25sp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/City_trainer_for_found"
+                    android:layout_width="361dp"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="10dp"
+                    android:gravity="center"
+                    android:text="City trainer"
+                    android:textColor="#FFF"
+                    android:textSize="25sp"
+                    android:textStyle="bold" />
+
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </androidx.cardview.widget.CardView>
+
+
+</LinearLayout>
+
+
+
