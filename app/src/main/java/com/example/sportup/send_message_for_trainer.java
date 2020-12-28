@@ -36,7 +36,7 @@ public class send_message_for_trainer extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 String id = mesaageDbref.push().getKey();
-                Message m = new Message(detailes_message.getText().toString(),chooch.getId_system(),user_to_want.getId_system(),false);
+                Message m = new Message(detailes_message.getText().toString(),chooch.getId_system(),user_to_want.getId_system(),id,false);
                 mesaageDbref.child(id).setValue(m);
                 Toast.makeText(send_message_for_trainer.this, "Message send !", Toast.LENGTH_SHORT).show();
                 Intent i = new Intent(send_message_for_trainer.this , user_Home.class);

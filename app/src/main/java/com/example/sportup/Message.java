@@ -1,14 +1,23 @@
 package com.example.sportup;
 
 public class Message {
-    private String message,id_trainer,id_user;
+    private String message,id_trainer,id_user,id_system;
     private boolean is_read;
 
-    public Message(String message, String id_trainer, String id_user,  boolean is_read) {
+    public Message(String message, String id_trainer, String id_user,   String id_system,boolean is_read) {
         this.message = message;
         this.id_trainer = id_trainer;
+        this.id_system=id_system;
         this.id_user = id_user;
         this.is_read = is_read;
+    }
+
+    public String getId_system() {
+        return id_system;
+    }
+
+    public void setId_system(String id_system) {
+        this.id_system = id_system;
     }
 
     public String getMessage() {

@@ -12,6 +12,7 @@ import android.os.Build;
 import android.os.Bundle;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.ListAdapter;
 import android.widget.ListView;
@@ -60,7 +61,7 @@ public class view_Message extends AppCompatActivity {
                                 Object object = ds.getValue(Object.class);
                                 String json = new Gson().toJson(object);
                                 Message m= new Gson().fromJson(json, Message.class);
-                                if(m.getId_trainer().equals(tranier.getId_system())) {
+                                if(m.getId_trainer().equals(tranier.getId_system()) && m.isIs_read()==false) {
                                     messageList.add(m);
                                 }
                         }
@@ -83,7 +84,7 @@ public class view_Message extends AppCompatActivity {
                     String json = new Gson().toJson(object);
                     User u= new Gson().fromJson(json, User.class);
                     for (int j = 0; j <messageList.size() ; j++) {
-                        if(messageList.get(j).getId_user().equals(u.getId_system())){
+                        if(messageList.get(j).getId_user().equals(u.getId_system()) ){
                             userList.add(u);
                             text.add(messageList.get(j).getMessage());
                         }
@@ -106,7 +107,32 @@ public class view_Message extends AppCompatActivity {
 //                lst.setAdapter(ad);
                 ArrayAdapter arrayAdapter = new ArrayAdapter( view_Message.this,android.R.layout.simple_list_item_activated_1,arrayList);
                 listView.setAdapter(arrayAdapter);
+                if (listView.getCount()==0) {
+                    openDialog();
+                    //Toast.makeText(view_Message.this,"No Mesaage To Display :(",Toast.LENGTH_LONG).show();
 
+                }
+                listView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+                    @Override
+                    public void onItemClick(AdapterView<?> adapterView, View view, int i, long l) {
+                        messageList.get(i).setIs_read(true);
+                        Dbmessage.child(messageList.get(i).getId_system()).child("is_read").setValue(true);
+
+                        arrayList.remove(i);
+
+                        ArrayAdapter arrayAdapter = new ArrayAdapter( view_Message.this,android.R.layout.simple_list_item_activated_1,arrayList);
+                        listView.setAdapter(arrayAdapter);
+
+                    }
+                });
+
+
+
+            }
+
+            private void openDialog() {
+            Dialog_messgae dialog_messgae = new Dialog_messgae(view_Message.this,tranier);
+            dialog_messgae.show(getSupportFragmentManager(),"example");
 
             }
 
@@ -115,6 +141,7 @@ public class view_Message extends AppCompatActivity {
 
             }
         });
+
 
 
 

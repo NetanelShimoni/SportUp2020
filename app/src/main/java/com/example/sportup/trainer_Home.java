@@ -66,7 +66,7 @@ public class trainer_Home extends AppCompatActivity {
             Intent i = new Intent(this,view_Message.class);
             i.putExtra("trainer",this.mover);
             startActivity(i);
-            Toast.makeText(this, "you click help", Toast.LENGTH_SHORT).show();
+
         }else{
             return super.onOptionsItemSelected(item);
         }
