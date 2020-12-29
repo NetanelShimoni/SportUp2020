@@ -67,6 +67,9 @@ public class trainer_Home extends AppCompatActivity {
             i.putExtra("trainer",this.mover);
             startActivity(i);
 
+        }else if(item.getItemId()==R.id.logout) {
+            Intent i = new Intent(this,MainActivity.class);
+            startActivity(i);
         }else{
             return super.onOptionsItemSelected(item);
         }

@@ -5,17 +5,36 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class Tranier implements Serializable {
-    private String name , city, phone_num,password,id_system;
+    private String name , city, phone_num,password,id_system,Uri_certificate;
+    private boolean is_verify;
 
     public Tranier() {
     }
 
-    public Tranier(String name,String id_system ,String city, String phone_num, String password) {
+    public Tranier(String name,String id_system ,String city, String phone_num, String password,String uri) {
         this.name = name;
+        this.is_verify=false;
         this.city = city;
         this.id_system=id_system;
+        this.Uri_certificate=uri;
         this.phone_num = phone_num;
         this.password = password;
+    }
+
+    public boolean isIs_verify() {
+        return is_verify;
+    }
+
+    public void setIs_verify(boolean is_verify) {
+        this.is_verify = is_verify;
+    }
+
+    public String getUri_certificate() {
+        return Uri_certificate;
+    }
+
+    public void setUri_certificate(String uri_certificate) {
+        Uri_certificate = uri_certificate;
     }
 
     public String getId_system() {

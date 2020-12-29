@@ -20,25 +20,7 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.846" />
-
-    <CheckBox
-        android:id="@+id/checkBox2"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:hapticFeedbackEnabled="false"
-        android:shadowColor="#8C3737"
-        android:text="I have a fitness trainer certificate"
-        android:textAllCaps="false"
-        android:textColor="#0A0A0B"
-        android:textSize="24sp"
-        android:textStyle="normal|bold|italic"
-        app:buttonTint="#191717"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.685" />
+        app:layout_constraintVertical_bias="0.909" />
 
     <EditText
         android:id="@+id/city"
@@ -126,6 +108,17 @@
         app:srcCompat="@drawable/ic_baseline_add_ic_call_24" />
 
     <EditText
+        android:id="@+id/file_name1"
+        android:layout_width="317dp"
+        android:layout_height="47dp"
+        android:text="PUT YOUR CERTIFICATE (only pdf)"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.665"/>
+
+    <EditText
         android:id="@+id/editTextTextPersonName"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -162,6 +155,24 @@
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.216"
         app:srcCompat="@drawable/ic_baseline_supervised_user_circle_24" />
+
+    <Button
+        android:id="@+id/upload_CV"
+        android:layout_width="296dp"
+        android:layout_height="61dp"
+        android:layout_marginTop="41dp"
+        android:layout_marginBottom="16dp"
+        android:background="@drawable/button_selector"
+        android:text="Upload"
+        android:textColor="@android:color/holo_orange_dark"
+        android:textStyle="bold"
+        app:backgroundTint="#686C83"
+        app:layout_constraintBottom_toTopOf="@+id/button7"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.495"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/phone_tranier"
+        app:layout_constraintVertical_bias="1.0" />
 
     <!--    <de.hdodenhof.circleimageview.CircleImageView-->
     <!--        android:id="@+id/profile_image"-->

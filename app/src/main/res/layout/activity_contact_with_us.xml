@@ -8,7 +8,7 @@
     tools:context=".contact_with_us">
 
     <EditText
-        android:id="@+id/user_name"
+        android:id="@+id/user_name_contact"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="288dp"
@@ -25,7 +25,7 @@
         app:layout_constraintTop_toTopOf="parent" />
 
     <EditText
-        android:id="@+id/user_phone"
+        android:id="@+id/user_phone_contact"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="356dp"
@@ -64,7 +64,7 @@
         android:layout_width="320dp"
         android:layout_height="146dp"
         android:text=' Please leave your details and we will get back to you as soon as possible'
-        android:textColor="@color/purple_700"
+        android:textColor="@color/color_yello"
         android:textSize="25dp"
         android:textStyle="bold|italic"
         app:layout_constraintBottom_toBottomOf="parent"
@@ -73,5 +73,19 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.212" />
+
+    <Button
+        android:id="@+id/send"
+        android:layout_width="184dp"
+        android:layout_height="86dp"
+        android:background="#BC5656"
+        android:backgroundTint="@color/green_dark"
+        android:text="SEND"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/user_phone_contact"
+        app:layout_constraintVertical_bias="0.446" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

@@ -26,10 +26,10 @@ public class register_User extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_register__user);
-        etName = findViewById(R.id.user_name);
+        etName = findViewById(R.id.user_name_contact);
         etPassword = findViewById(R.id.user_password);
         etCity = findViewById(R.id.user_city);
-        etPhone = findViewById(R.id.user_phone);
+        etPhone = findViewById(R.id.user_phone_contact);
         join = (Button) findViewById(R.id.user_join);
         aSwitch = findViewById(R.id.chak_is_healty);
         etHigh = findViewById(R.id.spinner_trainer_muselse);

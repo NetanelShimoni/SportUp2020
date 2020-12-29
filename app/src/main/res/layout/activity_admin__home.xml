@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/admin_back"
+    tools:context=".Admin_Home">
+
+    <Button
+        android:id="@+id/button8"
+        style="@style/Widget.AppCompat.Button.Borderless.Colored"
+        android:layout_width="291dp"
+        android:layout_height="97dp"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginStart="64dp"
+        android:layout_marginLeft="64dp"
+        android:layout_marginTop="219dp"
+        android:background="@drawable/button_radius"
+        android:shadowColor="@color/COLOR_RED"
+        android:text="OUR TRAINERS"
+        android:textColor="#511E1E"
+        app:backgroundTint="#EDB809"
+        app:strokeColor="@color/bright_green" />
+
+    <Button
+        android:id="@+id/button9"
+        android:layout_width="303dp"
+        android:layout_height="107dp"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="394dp"
+        android:background="@drawable/button_radius"
+        android:shadowColor="@color/COLOR_RED"
+        android:text="SUPPORT"
+        android:textColor="#511E1E"
+        app:backgroundTint="#EDB809"
+        app:strokeColor="@color/bright_green" />
+
+    <ImageView
+        android:id="@+id/imageView2"
+        android:layout_width="396dp"
+        android:layout_height="203dp"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentEnd="true"
+        android:layout_marginTop="11dp"
+        app:srcCompat="@drawable/image" />
+</RelativeLayout>

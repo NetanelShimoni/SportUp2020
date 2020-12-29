@@ -42,10 +42,17 @@ TextView name , password;
                     @Override
                     public void onDataChange(@NonNull DataSnapshot snapshot) {
                         boolean flag=false;
+                        if (name.getText().toString().equals("Admin") && password.getText().toString().equals("Admin")){
+                            Intent i = new Intent(trainer_Login.this,Admin_Home.class);
+                            startActivity(i);
+                            flag=true;
+                        }
 
                         for (DataSnapshot ds : snapshot.getChildren()){
                             String name1 =name.getText().toString();
                             String pass1 =password.getText().toString();
+
+
                             if(ds.child("name").getValue().equals(name1) && ds.child("password").getValue().equals(pass1)){
                                 Object object = ds.getValue(Object.class);
                                 String json = new Gson().toJson(object);
@@ -61,6 +68,7 @@ TextView name , password;
                             }
                         }
                         if(!flag){
+
                             Toast.makeText(trainer_Login.this,"Sorry , try again :(",Toast.LENGTH_LONG).show();
 
 
