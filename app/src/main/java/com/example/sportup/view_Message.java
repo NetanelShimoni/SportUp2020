@@ -5,8 +5,10 @@ import androidx.annotation.RequiresApi;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.annotation.SuppressLint;
+import android.app.Dialog;
 import android.content.Intent;
 import android.content.res.ColorStateList;
+import android.graphics.drawable.ColorDrawable;
 import android.graphics.drawable.ColorStateListDrawable;
 import android.os.Build;
 import android.os.Bundle;
@@ -14,6 +16,8 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
+import android.widget.Button;
+import android.widget.ImageView;
 import android.widget.ListAdapter;
 import android.widget.ListView;
 import android.widget.TextView;
@@ -40,12 +44,18 @@ public class view_Message extends AppCompatActivity {
     private ListView listView;
     private  ArrayList<String> text;
     private  ArrayList <String> arrayList;
+    private Dialog dialog;
+    private Button bt_return_home;
+    private ImageView close;
     DatabaseReference Dbmessage;
     DatabaseReference DBUser;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_view__message);
+        bt_return_home = findViewById(R.id.button_dialog);
+        close = findViewById(R.id.close_image);
+        dialog = new Dialog(this);
         Intent i = getIntent();
         this.tranier= (Tranier) i.getSerializableExtra("trainer");
         this.listView = (ListView) findViewById(R.id.list_view_message);
@@ -108,7 +118,29 @@ public class view_Message extends AppCompatActivity {
                 ArrayAdapter arrayAdapter = new ArrayAdapter( view_Message.this,android.R.layout.simple_list_item_activated_1,arrayList);
                 listView.setAdapter(arrayAdapter);
                 if (listView.getCount()==0) {
-                    openDialog();
+                    dialog.setContentView(R.layout.layout_dialog);
+                    bt_return_home =(Button) dialog.findViewById(R.id.button_dialog);
+                    close =(ImageView) dialog.findViewById(R.id.close_image);
+                    dialog.show();
+
+                    close.setOnClickListener(new View.OnClickListener() {
+                        @Override
+                        public void onClick(View view) {
+                            dialog.dismiss();
+                        }
+                    });
+                    bt_return_home.setOnClickListener(new View.OnClickListener() {
+                        @Override
+                        public void onClick(View view) {
+                            Intent intent = new Intent(view_Message.this,trainer_Home.class);
+                            intent.putExtra("trainer",tranier);
+                            startActivity(intent);
+                        }
+                    });
+
+
+
+                    //openDialog();
                     //Toast.makeText(view_Message.this,"No Mesaage To Display :(",Toast.LENGTH_LONG).show();
 
                 }
@@ -130,11 +162,11 @@ public class view_Message extends AppCompatActivity {
 
             }
 
-            private void openDialog() {
-            Dialog_messgae dialog_messgae = new Dialog_messgae(view_Message.this,tranier);
-            dialog_messgae.show(getSupportFragmentManager(),"example");
-
-            }
+//            private void openDialog() {
+//            Dialog_messgae dialog_messgae = new Dialog_messgae(view_Message.this,tranier);
+//            dialog_messgae.show(getSupportFragmentManager(),"example");
+//
+//            }
 
             @Override
             public void onCancelled(@NonNull DatabaseError error) {
