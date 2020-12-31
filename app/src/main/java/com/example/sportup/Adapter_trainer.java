@@ -28,6 +28,13 @@ public class Adapter_trainer extends RecyclerView.Adapter<Adapter_trainer.ViewHo
 
     }
 
+    public Adapter_trainer(List MyTrainers,our_Trainer activity) {
+        this.MyTrainers=new ArrayList<>();
+        this.MyTrainers = MyTrainers;
+        this.context = activity;
+        this.user=null;
+    }
+
     @NonNull
     @Override
     public Adapter_trainer.ViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
@@ -42,26 +49,46 @@ public class Adapter_trainer extends RecyclerView.Adapter<Adapter_trainer.ViewHo
     public void onBindViewHolder(@NonNull ViewHolder holder, int position) {
         final Tranier MyexeDataList =MyTrainers.get(position);
         holder.textViewName.setText("Trainer Name: "+MyexeDataList.getName());
-        holder.textViewName0.setText("Trainer City: "+MyexeDataList.getCity());
+        if(user==null && MyTrainers.get(position).isIs_verify()){
+            holder.textViewacept.setText("Accept!");
+        }else if(user==null){
+            holder.textViewacept.setText("No Accept!");
 
+        }
+        if(this.user!=null) {
+            holder.textViewName0.setText("Trainer City: " + MyexeDataList.getCity());
+        }
 
         holder.itemView.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent i = new Intent(context, send_message_for_trainer.class);
-                Tranier move = new Tranier();
-                for (int j = 0; j <MyTrainers.size() ; j++) {
-                    if(MyexeDataList.getId_system().equals(MyTrainers.get(j).getId_system())){
-                         move= MyTrainers.get(j);
-                         break;
+                if(user!=null) {
+                    Intent i = new Intent(context, send_message_for_trainer.class);
+                    Tranier move = new Tranier();
+                    for (int j = 0; j < MyTrainers.size(); j++) {
+                        if (MyexeDataList.getId_system().equals(MyTrainers.get(j).getId_system())) {
+                            move = MyTrainers.get(j);
+                            break;
+                        }
                     }
+
+
+                    i.putExtra("trainer", move);
+                    i.putExtra("user", user);
+                    context.startActivity(i);
                 }
-
-
-                i.putExtra("trainer",move);
-                i.putExtra("user",user);
-                context.startActivity(i);
-
+                else{
+                    Intent i = new Intent(context,ditaiels_trainer.class);
+                    Tranier move = new Tranier();
+                    for (int j = 0; j < MyTrainers.size(); j++) {
+                        if (MyexeDataList.getId_system().equals(MyTrainers.get(j).getId_system())) {
+                            move = MyTrainers.get(j);
+                            i.putExtra("trainer",move);
+                            break;
+                        }
+                    }
+                    context.startActivity(i);
+                }
 
 
 
@@ -80,12 +107,14 @@ public class Adapter_trainer extends RecyclerView.Adapter<Adapter_trainer.ViewHo
     public class ViewHolder extends RecyclerView.ViewHolder{
         TextView textViewName;
         TextView textViewName0;
+        TextView textViewacept;
 
 
         public ViewHolder(@NonNull View itemView) {
             super(itemView);
             textViewName = itemView.findViewById(R.id.name_trainer_for_found);
             textViewName0 = itemView.findViewById(R.id.City_trainer_for_found);
+            textViewacept = itemView.findViewById(R.id.textView_accept);
 
 
 

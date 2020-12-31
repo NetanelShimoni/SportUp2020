@@ -2,7 +2,9 @@ package com.example.sportup;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.Intent;
 import android.os.Bundle;
+import android.view.View;
 
 public class Admin_Home extends AppCompatActivity {
 
@@ -10,5 +12,16 @@ public class Admin_Home extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_admin__home);
+    }
+
+    public void Support(View v){
+        Intent i = new Intent(Admin_Home.this,Support_Admin.class);
+        startActivity(i);
+
+    }
+    public void our_Trainers(View v){
+        Intent i = new Intent(Admin_Home.this,our_Trainer.class);
+        startActivity(i);
+
     }
 }

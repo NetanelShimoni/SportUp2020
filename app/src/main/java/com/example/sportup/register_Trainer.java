@@ -80,16 +80,6 @@ public class register_Trainer extends AppCompatActivity {
         firebaseAuto = firebaseAuto.getInstance();
 
         upload_pdf =  findViewById(R.id.file_name1);
-        // ProfileImage = (CircleImageView) findViewById(R.id.profile_image);
-//        ProfileImage.setOnClickListener(new View.OnClickListener() {
-//            @Override
-//            public void onClick(View view) {
-//                Intent galery = new Intent();
-//                galery.setType("image/*");
-//                galery.setAction(Intent.ACTION_GET_CONTENT);
-//                startActivityForResult(Intent.createChooser(galery,"Select CV (ONLY PICTURE)"),PICK_IMAGE);
-//            }
-//        });
         etName = findViewById(R.id.editTextTextPersonName);
         etPassword = findViewById(R.id.password_trainer);
         etCity = findViewById(R.id.city);
@@ -189,13 +179,14 @@ public class register_Trainer extends AppCompatActivity {
         Date date = new Date();
         System.out.println(formatter.format(date));
         StorageReference reference = storageManager.child("uploadPDF"+" "+formatter.format(date)+" "+etName.getText().toString()+".pdf");
+        uri_String="uploadPDF"+" "+formatter.format(date)+" "+etName.getText().toString()+".pdf";
         reference.putFile(data).addOnSuccessListener(new OnSuccessListener<UploadTask.TaskSnapshot>() {
             @Override
             public void onSuccess(UploadTask.TaskSnapshot taskSnapshot) {
                 Task<Uri> uriTask =taskSnapshot.getStorage().getDownloadUrl();
                 while(!uriTask.isComplete());
                     Uri uri = uriTask.getResult();
-                    uri_String=uri.toString();
+                   // uri_String=uri.toString();
 
 
                     //PDFDbRef.child(PDFDbRef.push().getKey()).setValue(pdf);

@@ -4,6 +4,8 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.view.Menu;
+import android.view.MenuItem;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
@@ -19,6 +21,7 @@ public class trainer_add_Exersice extends AppCompatActivity {
     EditText e_name , e_dis,e_link;
     DatabaseReference exerciseDbRef;
     Button add;
+    private  Tranier mover;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -35,6 +38,8 @@ public class trainer_add_Exersice extends AppCompatActivity {
             add = findViewById(R.id.button_add_exe);
         FirebaseDatabase mData = FirebaseDatabase.getInstance();
         exerciseDbRef = mData.getInstance().getReference("Exersice");
+        Intent intent = getIntent();
+        mover = (Tranier)intent.getSerializableExtra("trainer");
 
         add.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -45,8 +50,8 @@ public class trainer_add_Exersice extends AppCompatActivity {
                 String  hight = spinner_hight.getSelectedItem().toString();
                 String  witht = spinner_wight.getSelectedItem().toString();
                 String name_maselce = spinner_muselse.getSelectedItem().toString();
-                Intent intent = getIntent();
-                Tranier mover = (Tranier)intent.getSerializableExtra("trainer");
+
+
                 String id = exerciseDbRef.push().getKey();
 
                 String name_trainer=mover.getName();
@@ -64,4 +69,32 @@ public class trainer_add_Exersice extends AppCompatActivity {
 
 
     }
+    @Override
+    public boolean onCreateOptionsMenu(Menu menue){
+        getMenuInflater().inflate(R.menu.menu_trainer,menue);
+        return true;
+    }
+
+    @Override
+    public boolean onOptionsItemSelected(MenuItem item){
+        if(item.getItemId()==R.id.profile) {
+            // setContentView(R.layout.activity_sentences);
+            Intent i = new Intent(this,Edit_profile_trainer.class);
+            i.putExtra("trainer",this.mover);
+            startActivity(i);
+        }else if(item.getItemId()==R.id.view){
+            //setContentView(R.layout.activity_contact_with_us);
+            Intent i = new Intent(this,view_Message.class);
+            i.putExtra("trainer",this.mover);
+            startActivity(i);
+
+        }else if(item.getItemId()==R.id.logout) {
+            Intent i = new Intent(this,MainActivity.class);
+            startActivity(i);
+        }else{
+            return super.onOptionsItemSelected(item);
+        }
+        return true;
+    }
+
 }

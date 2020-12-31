@@ -5,24 +5,20 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@drawable/contact"
-    tools:context=".contact_with_us">
+    tools:context=".Contact_Us">
 
-    <EditText
-        android:id="@+id/user_name_contact"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="288dp"
-        android:ems="10"
-        android:gravity="center"
-        android:hint="FullName"
-        android:inputType="textEmailAddress"
-        android:textColor="#090909"
-
-        android:textColorHint="#070707"
+    <Button
+        android:id="@+id/button12"
+        android:layout_width="207dp"
+        android:layout_height="68dp"
+        android:background="@drawable/button_radius"
+        android:text="Send"
+        app:backgroundTint="#125A7E"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.497"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.734" />
 
     <EditText
         android:id="@+id/user_phone_contact"
@@ -41,6 +37,38 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
+    <EditText
+        android:id="@+id/user_name_contact"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="288dp"
+        android:ems="10"
+        android:gravity="center"
+        android:hint="FullName"
+        android:inputType="textEmailAddress"
+        android:textColor="#090909"
+
+        android:textColorHint="#070707"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.497"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/sentence_text"
+        android:layout_width="320dp"
+        android:layout_height="146dp"
+        android:text=' Please leave your details and we will get back to you as soon as possible'
+        android:textColor="@color/color_yello"
+        android:textSize="25dp"
+        android:textStyle="bold|italic"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.621"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.212" />
+
     <TextView
         android:id="@+id/open_contact"
         android:layout_width="378dp"
@@ -58,34 +86,5 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.025" />
-
-    <TextView
-        android:id="@+id/sentence_text"
-        android:layout_width="320dp"
-        android:layout_height="146dp"
-        android:text=' Please leave your details and we will get back to you as soon as possible'
-        android:textColor="@color/color_yello"
-        android:textSize="25dp"
-        android:textStyle="bold|italic"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.621"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.212" />
-
-    <Button
-        android:id="@+id/send"
-        android:layout_width="184dp"
-        android:layout_height="86dp"
-        android:background="#BC5656"
-        android:backgroundTint="@color/green_dark"
-        android:text="SEND"
-        android:textStyle="bold"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/user_phone_contact"
-        app:layout_constraintVertical_bias="0.446" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

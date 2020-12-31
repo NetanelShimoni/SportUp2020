@@ -9,14 +9,18 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.SportUp">
-        <activity android:name=".Admin_Home"></activity>
+        <activity android:name=".ditaiels_trainer"></activity>
+        <activity android:name=".our_Trainer" />
+        <activity android:name=".Support_message" />
+        <activity android:name=".Support_Admin" />
+        <activity android:name=".Contact_Us" />
+        <activity android:name=".Admin_Home" />
         <activity android:name=".view_Message" />
         <activity
             android:name=".test"
             android:label="@string/title_activity_test" />
         <activity android:name=".Edit_profile_trainer" />
         <activity android:name=".send_message_for_trainer" />
-        <activity android:name=".contact_with_us" />
         <activity android:name=".edit_profile_user" />
         <activity android:name=".Find_trainer" />
         <activity android:name=".home_Workout" />
@@ -43,12 +47,12 @@
     </application>
     <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
     <uses-permission android:name="android.permission.INTERNET" />
-    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
-    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
-    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
     <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
     <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
 
-    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
 
 </manifest>

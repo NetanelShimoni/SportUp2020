@@ -5,6 +5,8 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.view.Menu;
+import android.view.MenuItem;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
@@ -94,6 +96,33 @@ public class Edit_profile_trainer extends AppCompatActivity {
         });
 
 
+    }
+    @Override
+    public boolean onCreateOptionsMenu(Menu menue){
+        getMenuInflater().inflate(R.menu.menu_trainer,menue);
+        return true;
+    }
+
+    @Override
+    public boolean onOptionsItemSelected(MenuItem item){
+        if(item.getItemId()==R.id.profile) {
+            // setContentView(R.layout.activity_sentences);
+            Intent i = new Intent(this,Edit_profile_trainer.class);
+            i.putExtra("trainer",this.tranier);
+            startActivity(i);
+        }else if(item.getItemId()==R.id.view){
+            //setContentView(R.layout.activity_contact_with_us);
+            Intent i = new Intent(this,view_Message.class);
+            i.putExtra("trainer",this.tranier);
+            startActivity(i);
+
+        }else if(item.getItemId()==R.id.logout) {
+            Intent i = new Intent(this,MainActivity.class);
+            startActivity(i);
+        }else{
+            return super.onOptionsItemSelected(item);
+        }
+        return true;
     }
 
 

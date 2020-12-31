@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/support"
+    tools:context=".Support_message">
+
+    <TextView
+        android:id="@+id/name_support"
+        android:layout_width="389dp"
+        android:layout_height="105dp"
+        android:gravity="center"
+        android:textColor="@color/purple_200"
+        android:textSize="36sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.433"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.192" />
+
+    <TextView
+        android:id="@+id/phone_support"
+        android:layout_width="389dp"
+        android:layout_height="105dp"
+        android:gravity="center"
+        android:textColor="@color/purple_200"
+        android:textSize="36sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.727"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.445" />
+
+    <CheckBox
+        android:id="@+id/checkBox_supoort"
+        android:layout_width="323dp"
+        android:layout_height="85dp"
+        android:layout_marginTop="154dp"
+        android:gravity="center"
+        android:text="is take care"
+        android:textSize="36sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.46"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.68" />
+
+    <Button
+        android:id="@+id/button11"
+        android:layout_width="222dp"
+        android:layout_height="46dp"
+        android:layout_marginTop="62dp"
+        android:text="upDate"
+        app:backgroundTint="#935858"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.497"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/checkBox_supoort"
+        app:layout_constraintVertical_bias="0.0" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

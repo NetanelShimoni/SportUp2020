@@ -56,12 +56,9 @@ ImageView imageView;
 
     @Override
     public boolean onOptionsItemSelected(MenuItem item){
-        if(item.getItemId()==R.id.settings) {
-           // setContentView(R.layout.activity_sentences);
-            Toast.makeText(this, "you click sttings", Toast.LENGTH_SHORT).show();
-        }else if(item.getItemId()==R.id.help){
-            setContentView(R.layout.activity_contact_with_us);
-            Toast.makeText(this, "you click help", Toast.LENGTH_SHORT).show();
+        if(item.getItemId()==R.id.help){
+            Intent i = new Intent(MainActivity.this,Contact_Us.class);
+            startActivity(i);
         }else{
             return super.onOptionsItemSelected(item);
         }

@@ -63,7 +63,6 @@ TextView name , password;
 
                                 Intent j = new Intent(trainer_Login.this , trainer_Home.class);
                                 j.putExtra("trainer", t);
-
                                 startActivity(j);
                             }
                         }
