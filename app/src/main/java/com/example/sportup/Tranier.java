@@ -11,12 +11,12 @@ public class Tranier implements Serializable {
     public Tranier() {
     }
 
-    public Tranier(String name,String id_system ,String city, String phone_num, String password,String uri) {
+    public Tranier(String name,String id_system ,String city, String phone_num, String password,String Uri_certificate) {
         this.name = name;
         this.is_verify=false;
         this.city = city;
         this.id_system=id_system;
-        this.Uri_certificate=uri;
+        this.Uri_certificate=Uri_certificate;
         this.phone_num = phone_num;
         this.password = password;
     }
@@ -39,6 +39,19 @@ public class Tranier implements Serializable {
 
     public String getId_system() {
         return id_system;
+    }
+
+    @Override
+    public String toString() {
+        return "Tranier{" +
+                "name='" + name + '\'' +
+                ", city='" + city + '\'' +
+                ", phone_num='" + phone_num + '\'' +
+                ", password='" + password + '\'' +
+                ", id_system='" + id_system + '\'' +
+                ", Uri_certificate='" + Uri_certificate + '\'' +
+                ", is_verify=" + is_verify +
+                '}';
     }
 
     public void setId_system(String id_system) {

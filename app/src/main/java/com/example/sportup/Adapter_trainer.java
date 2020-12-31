@@ -72,7 +72,6 @@ public class Adapter_trainer extends RecyclerView.Adapter<Adapter_trainer.ViewHo
                         }
                     }
 
-
                     i.putExtra("trainer", move);
                     i.putExtra("user", user);
                     context.startActivity(i);
@@ -82,11 +81,15 @@ public class Adapter_trainer extends RecyclerView.Adapter<Adapter_trainer.ViewHo
                     Tranier move = new Tranier();
                     for (int j = 0; j < MyTrainers.size(); j++) {
                         if (MyexeDataList.getId_system().equals(MyTrainers.get(j).getId_system())) {
+                            System.out.println("mt data list: "+MyexeDataList.getUri_certificate());
+
                             move = MyTrainers.get(j);
                             i.putExtra("trainer",move);
                             break;
                         }
                     }
+                    System.out.println(move.toString());
+
                     context.startActivity(i);
                 }
 

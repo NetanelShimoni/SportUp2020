@@ -49,8 +49,10 @@ ImageView imageView;
     }
 
     @Override
-    public boolean onCreateOptionsMenu(Menu menue){
-        getMenuInflater().inflate(R.menu.menu_login,menue);
+
+
+    public boolean onCreateOptionsMenu(Menu menu){
+        getMenuInflater().inflate(R.menu.menu_login,menu);
         return true;
     }
 

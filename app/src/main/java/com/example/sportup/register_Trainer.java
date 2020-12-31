@@ -98,7 +98,7 @@ public class register_Trainer extends AppCompatActivity {
                 String city = etCity.getText().toString();
                 String id = trainerDbRef.push().getKey();
 
-
+                System.out.println("url in register trainer: "+uri_String);
                     Tranier t = new Tranier(name, id, city, phone, password,uri_String);
 
                         trainerDbRef.child(id).setValue(t);
@@ -178,7 +178,8 @@ public class register_Trainer extends AppCompatActivity {
         SimpleDateFormat formatter = new SimpleDateFormat("dd.MM.yyyy HH:mm:ss");
         Date date = new Date();
         System.out.println(formatter.format(date));
-        StorageReference reference = storageManager.child("uploadPDF"+" "+formatter.format(date)+" "+etName.getText().toString()+".pdf");
+       // StorageReference reference = storageManager.child("uploadPDF"+" "+formatter.format(date)+" "+etName.getText().toString()+".pdf");
+        StorageReference reference = storageManager.child(etName.getText().toString());
         uri_String="uploadPDF"+" "+formatter.format(date)+" "+etName.getText().toString()+".pdf";
         reference.putFile(data).addOnSuccessListener(new OnSuccessListener<UploadTask.TaskSnapshot>() {
             @Override

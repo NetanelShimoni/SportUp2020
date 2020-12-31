@@ -39,13 +39,13 @@ public class our_Trainer extends AppCompatActivity {
                     Object object = ds.getValue(Object.class);
                     String json = new Gson().toJson(object);
                     Tranier t= new Gson().fromJson(json, Tranier.class);
+                    System.out.println("t: "+t.toString());
                         list.add(t);
 
                 }
                 RecyclerView recyclerView = findViewById(R.id.recyclerView);
                 recyclerView.setHasFixedSize(true);
                 recyclerView.setLayoutManager(new LinearLayoutManager(our_Trainer.this));
-
                 Adapter_trainer trainer_AD = new Adapter_trainer(list,our_Trainer.this);
 
                 recyclerView.setAdapter(trainer_AD);
