@@ -48,7 +48,7 @@ public class Find_trainer extends AppCompatActivity {
                     String json = new Gson().toJson(object);
                     Tranier t= new Gson().fromJson(json, Tranier.class);
                     String location_trainer= t.getCity();
-                    if(location_trainer.equals(location_user) ) { // FILTER!!
+                    if(location_trainer.equals(location_user) && t.isIs_verify() ) { // FILTER!!
                         list.add(t);
                     }
                 }

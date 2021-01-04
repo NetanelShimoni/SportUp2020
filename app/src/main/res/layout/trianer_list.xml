@@ -65,7 +65,8 @@
                     android:layout_height="48dp"
                     android:rotation="21"
                     android:textColor="#D80909"
-                    android:textSize="24sp" />
+                    android:textSize="24sp"
+                    android:textStyle="bold" />
 
 
             </LinearLayout>

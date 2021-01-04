@@ -98,8 +98,7 @@ public class register_Trainer extends AppCompatActivity {
                 String city = etCity.getText().toString();
                 String id = trainerDbRef.push().getKey();
 
-                System.out.println("url in register trainer: "+uri_String);
-                    Tranier t = new Tranier(name, id, city, phone, password,uri_String);
+                    Tranier t = new Tranier(name, id, city, phone, password);
 
                         trainerDbRef.child(id).setValue(t);
                     Toast.makeText(register_Trainer.this, "Data inserted!", Toast.LENGTH_SHORT).show();

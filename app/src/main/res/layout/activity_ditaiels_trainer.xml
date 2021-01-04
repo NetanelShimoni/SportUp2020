@@ -62,8 +62,21 @@
         app:layout_constraintTop_toBottomOf="@+id/d_city"
         app:layout_constraintVertical_bias="0.23" />
 
+    <Button
+        android:id="@+id/up_date"
+        android:layout_width="297dp"
+        android:layout_height="75dp"
+        android:background="@drawable/button_radius"
+        android:text="UpDate"
+        app:backgroundTint="#323C78"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/d_city"
+        app:layout_constraintVertical_bias="0.863" />
+
     <CheckBox
-        android:id="@+id/checkBox"
+        android:id="@+id/checkBox_accept"
         android:layout_width="250dp"
         android:layout_height="81dp"
         android:text="Accept"

@@ -76,13 +76,11 @@ public class Adapter_trainer extends RecyclerView.Adapter<Adapter_trainer.ViewHo
                     i.putExtra("user", user);
                     context.startActivity(i);
                 }
-                else{
+                else{ // user==null -->our_trainer ---> Admin
                     Intent i = new Intent(context,ditaiels_trainer.class);
                     Tranier move = new Tranier();
                     for (int j = 0; j < MyTrainers.size(); j++) {
                         if (MyexeDataList.getId_system().equals(MyTrainers.get(j).getId_system())) {
-                            System.out.println("mt data list: "+MyexeDataList.getUri_certificate());
-
                             move = MyTrainers.get(j);
                             i.putExtra("trainer",move);
                             break;
