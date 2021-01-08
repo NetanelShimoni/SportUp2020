@@ -16,6 +16,7 @@ import com.google.firebase.database.FirebaseDatabase;
 
 public class register_User extends AppCompatActivity {
     EditText etName, etPhone, etCity, etPassword;
+    User user;
     Spinner etWeight, etHigh;
     Switch aSwitch;
     Button join;
@@ -54,7 +55,9 @@ public class register_User extends AppCompatActivity {
                     System.out.println("id is "+new_user.getId_system());
                     trainerDbRef.child(id).setValue(new_user);
                     Toast.makeText(register_User.this, "Data inserted!", Toast.LENGTH_SHORT).show();
-                    Intent i = new Intent( register_User.this,success_join.class);
+                    user=new User(name,id,phone,city,high,password,weight);
+                    Intent i = new Intent( register_User.this,user_Home.class);
+                    i.putExtra("name",user);
                     startActivity(i);
                 } else {
                     Toast.makeText(register_User.this, "checking Switch please!",
