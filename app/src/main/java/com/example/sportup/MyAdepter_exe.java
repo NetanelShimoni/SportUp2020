@@ -110,7 +110,7 @@ public class MyAdepter_exe extends RecyclerView.Adapter<MyAdepter_exe.ViewHolder
             textViewName = itemView.findViewById(R.id.name_trainer_for_found);
             textViewName1 = itemView.findViewById(R.id.City_trainer_for_found);
             textViewName2 = itemView.findViewById(R.id.exe_name);
-            imageView = itemView.findViewById(R.id.exe_name);
+            //imageView = itemView.findViewById(R.id.exe_name);
             textViewName0 = itemView.findViewById(R.id.textName);
             textViewName3 = itemView.findViewById(R.id.text_discription);
           //  back = itemView.findViewById(R.id.button_back);
