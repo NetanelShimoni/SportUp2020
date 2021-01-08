@@ -7,6 +7,7 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
+import android.widget.ImageView;
 import android.widget.TextView;
 //fdfdfdfsdfsdfdf
 import java.util.ArrayList;
@@ -109,13 +110,14 @@ public class Adapter_trainer extends RecyclerView.Adapter<Adapter_trainer.ViewHo
         TextView textViewName;
         TextView textViewName0;
         TextView textViewacept;
-
+        ImageView imageView;
 
         public ViewHolder(@NonNull View itemView) {
             super(itemView);
             textViewName = itemView.findViewById(R.id.name_trainer_for_found);
             textViewName0 = itemView.findViewById(R.id.City_trainer_for_found);
             textViewacept = itemView.findViewById(R.id.textView_accept);
+            imageView = itemView.findViewById(R.id.imageView5);
 
 
 

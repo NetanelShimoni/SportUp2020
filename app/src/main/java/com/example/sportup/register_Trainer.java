@@ -24,6 +24,7 @@ import android.webkit.ValueCallback;
 import android.widget.Button;
 import android.widget.CheckBox;
 import android.widget.EditText;
+import android.widget.ImageButton;
 import android.widget.ImageView;
 import android.widget.Spinner;
 import android.widget.Toast;
@@ -56,8 +57,10 @@ public class register_Trainer extends AppCompatActivity {
 
     private static final int GALARY =200 ;
     EditText etName,etPhone,etCity,etPassword,etid;
-    private Button btnJoin,uplod,CV;
+    private Button btnJoin,uplod,CV,submit;
+    private Button profile_image;
     StorageReference storageManager;
+    StorageReference profile;
     CheckBox box;
     int SELECT_PHOTO =1;
     Uri uri ;
@@ -82,6 +85,8 @@ public class register_Trainer extends AppCompatActivity {
         upload_pdf =  findViewById(R.id.file_name1);
         etName = findViewById(R.id.editTextTextPersonName);
         etPassword = findViewById(R.id.password_trainer);
+        profile_image = findViewById(R.id.take_selfi);
+        submit = findViewById(R.id.submit);
         etCity = findViewById(R.id.city);
         CV = findViewById(R.id.upload_CV);
         etPhone = findViewById(R.id.phone_tranier);
@@ -89,6 +94,23 @@ public class register_Trainer extends AppCompatActivity {
         FirebaseDatabase mDatabase = FirebaseDatabase.getInstance();
         trainerDbRef = mDatabase.getInstance().getReference("Trainer");
 
+        profile_image.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(MediaStore.ACTION_IMAGE_CAPTURE);
+
+                if (intent.resolveActivity(getPackageManager()) != null) {
+                    startActivityForResult(intent, 1);
+                }
+            }
+        });
+    submit.setOnClickListener(new View.OnClickListener() {
+        @Override
+        public void onClick(View view) {
+
+        }
+    });
+    
         btnJoin.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -124,15 +146,7 @@ public class register_Trainer extends AppCompatActivity {
             }
 
 
-            public boolean checkPremission() {
-                int res = ContextCompat.checkSelfPermission(register_Trainer.this, Manifest.permission.READ_EXTERNAL_STORAGE);
-                if (res == PackageManager.PERMISSION_GRANTED) {
-                    return true;
-                } else {
-                    return false;
-                }
 
-            }
 
         });
 

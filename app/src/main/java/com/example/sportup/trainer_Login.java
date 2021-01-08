@@ -16,6 +16,7 @@ import com.google.firebase.database.DatabaseError;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 import com.google.firebase.database.ValueEventListener;
+import com.google.firebase.storage.FirebaseStorage;
 import com.google.gson.Gson;
 
 public class trainer_Login extends AppCompatActivity {
@@ -30,6 +31,7 @@ TextView name , password;
         name=findViewById(R.id.editTextTextEmailAddress);
         password=findViewById(R.id.editTextTextPassword);
         go=findViewById(R.id.button4);
+
 
         FirebaseDatabase mDatabase = FirebaseDatabase.getInstance();
         trainerDbRef = mDatabase.getInstance().getReference("Trainer");

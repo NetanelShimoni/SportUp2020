@@ -2,6 +2,7 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
 
     xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
     android:orientation="vertical">
@@ -9,7 +10,7 @@
 
     <androidx.cardview.widget.CardView
         android:layout_width="411dp"
-        android:layout_height="274dp"
+        android:layout_height="wrap_content"
         android:layout_margin="5dp"
         android:background="#A51F1F"
         app:cardBackgroundColor="#7E7D79"
@@ -18,8 +19,8 @@
 
 
         <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="524dp"
+            android:layout_width="416dp"
+            android:layout_height="298dp"
             android:layout_marginTop="25dp"
             android:background="@drawable/bbb"
             android:orientation="horizontal">
@@ -61,12 +62,19 @@
 
                 <TextView
                     android:id="@+id/textView_accept"
-                    android:layout_width="285dp"
-                    android:layout_height="48dp"
+                    android:layout_width="246dp"
+                    android:layout_height="wrap_content"
                     android:rotation="21"
                     android:textColor="#D80909"
                     android:textSize="24sp"
                     android:textStyle="bold" />
+
+                <ImageView
+                    android:id="@+id/imageView5"
+                    android:layout_width="181dp"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="right"
+                    tools:srcCompat="@tools:sample/avatars" />
 
 
             </LinearLayout>
