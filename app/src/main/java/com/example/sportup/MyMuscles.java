@@ -1,5 +1,7 @@
 package com.example.sportup;
-
+/**
+ * this class is a object of message in the app.
+ */
 public class MyMuscles {
 
     private String MusclesName;

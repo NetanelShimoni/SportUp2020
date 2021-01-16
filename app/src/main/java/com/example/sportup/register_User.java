@@ -13,7 +13,9 @@ import android.widget.Toast;
 
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
-
+/**
+ * registration for user
+ */
 public class register_User extends AppCompatActivity {
     EditText etName, etPhone, etCity, etPassword;
     User user;

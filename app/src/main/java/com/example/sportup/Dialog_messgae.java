@@ -12,6 +12,9 @@ import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatDialog;
 import androidx.appcompat.app.AppCompatDialogFragment;
 
+/**
+ * this class represent the style of the dialog message that show to the trainer when he try to see the messages he get
+ */
 public class Dialog_messgae extends AppCompatDialogFragment {
     private Context activity;
     private Tranier tranier;

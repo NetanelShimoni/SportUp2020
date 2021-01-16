@@ -16,6 +16,9 @@ import java.util.List;
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
+/**
+ * this class import all the excersises
+ */
 public class MyAdepter_exe extends RecyclerView.Adapter<MyAdepter_exe.ViewHolder> {
   //  Exersice[] Myexe;
     Context context;

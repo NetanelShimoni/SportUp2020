@@ -16,7 +16,9 @@ import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 import com.google.firebase.database.ValueEventListener;
 import com.google.gson.Gson;
-
+/**
+ * User login screen
+ */
 public class user_Login extends AppCompatActivity {
     EditText etname, etpassword;
     Button bJoin;

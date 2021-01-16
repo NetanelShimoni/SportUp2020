@@ -6,6 +6,9 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 
+/**
+ * this class represent the option to register as a user or trainer
+ */
 public class register_Screen extends AppCompatActivity {
 
     @Override

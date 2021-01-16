@@ -4,6 +4,9 @@ import java.io.Serializable;
 import java.util.ArrayList;
 import java.util.List;
 
+/**
+ * this class is a object of trainer in the app.
+ */
 public class Tranier implements Serializable {
     private String name , city, phone_num,password,id_system;
     private boolean is_verify;

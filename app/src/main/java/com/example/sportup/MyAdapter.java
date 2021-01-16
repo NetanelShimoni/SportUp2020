@@ -13,6 +13,9 @@ import android.widget.Toast;
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
+/**
+ * this class imports all the images and all mucels that the trainer can upload
+ */
 public class MyAdapter extends RecyclerView.Adapter<MyAdapter.ViewHolder> {
 
     MyMuscles[] MyMuscles;

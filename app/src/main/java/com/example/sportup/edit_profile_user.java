@@ -17,6 +17,9 @@ import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 import com.google.firebase.database.ValueEventListener;
 
+/**
+ * this class allow to the user to change details
+ */
 public class edit_profile_user extends AppCompatActivity {
     TextView welcome;
     Intent intent;

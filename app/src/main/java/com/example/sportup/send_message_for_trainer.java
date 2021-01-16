@@ -11,7 +11,9 @@ import android.widget.Toast;
 
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
-
+/**
+ * user choose spesific trainer and send him message
+ */
 public class send_message_for_trainer extends AppCompatActivity {
     private TextView details_trainer ;
     private TextView  detailes_message;

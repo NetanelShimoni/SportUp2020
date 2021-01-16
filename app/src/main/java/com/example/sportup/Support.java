@@ -1,7 +1,9 @@
 package com.example.sportup;
 
 import java.io.Serializable;
-
+/**
+ * show all the trainers that register to the app. the admins need to allow to approve them
+ */
 public class Support implements Serializable {
 
     private String name;

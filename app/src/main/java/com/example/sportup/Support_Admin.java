@@ -24,7 +24,9 @@ import com.google.gson.Gson;
 import java.io.Serializable;
 import java.util.ArrayList;
 import java.util.List;
-
+/**
+ * the admin see all the support messages.
+ */
 public class Support_Admin extends AppCompatActivity {
     private List<String> all_Support;
     private ListView listView;

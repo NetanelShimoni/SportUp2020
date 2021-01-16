@@ -21,6 +21,9 @@ import com.google.gson.Gson;
 import java.util.ArrayList;
 import java.util.List;
 
+/**
+ * this class allow to the user to search a trainer that close to him
+ */
 public class Find_trainer extends AppCompatActivity {
     List<Tranier> list ;
     DatabaseReference trainerdb;

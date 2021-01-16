@@ -16,6 +16,9 @@ import android.widget.Toast;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 
+/**
+ * the trainer add a new excersice to the application
+ */
 public class trainer_add_Exersice extends AppCompatActivity {
     Spinner spinner_muselse,spinner_hight,spinner_wight;
     EditText e_name , e_dis,e_link;

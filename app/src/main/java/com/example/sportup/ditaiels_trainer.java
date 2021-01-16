@@ -37,6 +37,9 @@ import java.util.concurrent.TimeUnit;
 
 import static android.os.Environment.DIRECTORY_DOWNLOADS;
 
+/**
+ * this class represent the details of the trainer that we save in the db
+ */
 public class ditaiels_trainer extends AppCompatActivity {
     private Tranier tranier;
     private TextView p_name,p_phone,p_city;

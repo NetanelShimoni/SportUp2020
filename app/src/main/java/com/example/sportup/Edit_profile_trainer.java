@@ -18,7 +18,10 @@ import com.google.firebase.database.DatabaseError;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 import com.google.firebase.database.ValueEventListener;
-//child
+
+/**
+ * this class allow to the trainer to change hes details
+ */
 public class Edit_profile_trainer extends AppCompatActivity {
     TextView welcome;
     Intent intent;

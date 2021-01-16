@@ -16,6 +16,9 @@ import java.util.List;
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
+/**
+ * this class pulls out the traienrs from the database and shw them in recycle view
+ */
 public class Adapter_trainer extends RecyclerView.Adapter<Adapter_trainer.ViewHolder> {
     Context context;
     List<Tranier> MyTrainers;

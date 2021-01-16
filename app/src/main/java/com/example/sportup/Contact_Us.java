@@ -11,6 +11,9 @@ import android.widget.EditText;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 
+/**
+ * this class show the screen Represents the screen for contacting managers
+ */
 public class Contact_Us extends AppCompatActivity {
     private EditText user;
     private EditText phone;

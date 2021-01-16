@@ -19,6 +19,9 @@ import com.google.firebase.database.ValueEventListener;
 import com.google.firebase.storage.FirebaseStorage;
 import com.google.gson.Gson;
 
+/**
+* trainer login screen
+ */
 public class trainer_Login extends AppCompatActivity {
 TextView name , password;
     Button go;

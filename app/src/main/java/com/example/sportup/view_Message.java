@@ -37,6 +37,9 @@ import java.util.List;
 
 import static com.google.firebase.database.collection.LLRBNode.Color.*;
 
+/**
+ * this class represnt a screent that show all the messages the send to a specific trainer from the User.
+ */
 public class view_Message extends AppCompatActivity {
     private List<Message> messageList;
     private  List<User> userList;

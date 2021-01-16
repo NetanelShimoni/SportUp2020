@@ -1,5 +1,8 @@
 package com.example.sportup;
 
+/**
+ * this class is a object of message in the app.
+ */
 public class Message {
     private String message,id_trainer,id_user,id_system;
     private boolean is_read;

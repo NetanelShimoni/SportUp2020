@@ -6,6 +6,9 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 
+/**
+ * this class show the screen of the manger of the application
+ */
 public class Admin_Home extends AppCompatActivity {
 
     @Override

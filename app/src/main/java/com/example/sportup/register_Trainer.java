@@ -53,6 +53,9 @@ import java.time.LocalDate;
 import java.time.ZoneId;
 import java.util.Date;
 
+/**
+ * registration for trainer
+ */
 public class register_Trainer extends AppCompatActivity {
 
     private static final int GALARY =200 ;
@@ -124,8 +127,8 @@ public class register_Trainer extends AppCompatActivity {
 
                         trainerDbRef.child(id).setValue(t);
                     Toast.makeText(register_Trainer.this, "Data inserted!", Toast.LENGTH_SHORT).show();
-                    Intent i = new Intent(register_Trainer.this, success_join.class);
-                    startActivity(i);
+//                    Intent i = new Intent(register_Trainer.this, success_join.class);
+   //                 startActivity(i);
 
                     Toast.makeText(register_Trainer.this, "UserName is exist",
                             Toast.LENGTH_LONG).show();

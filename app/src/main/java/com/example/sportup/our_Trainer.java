@@ -18,6 +18,9 @@ import com.google.gson.Gson;
 import java.util.ArrayList;
 import java.util.List;
 
+/**
+ * this class represents list of all trainers for the mangers To confirm them in the app
+ */
 public class our_Trainer extends AppCompatActivity {
     private List<Tranier> list;
     DatabaseReference trainerdb;

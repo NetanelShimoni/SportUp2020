@@ -2,6 +2,9 @@ package com.example.sportup;
 
 import java.io.Serializable;
 
+/**
+ * this class is a object of User in the app.
+ */
 public class User  implements Serializable {
     String id_system,name, phone,city,high,password,weight;
 

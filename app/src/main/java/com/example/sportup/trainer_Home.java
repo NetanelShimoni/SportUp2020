@@ -15,6 +15,9 @@ import android.widget.Toast;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 
+/**
+ * screen that the trainer see when he get into the app
+ */
 public class trainer_Home extends AppCompatActivity {
     String s1[],s2[];
     int image []= {R.drawable.chest,R.drawable.six_pack,R.drawable.sulders,R.drawable.triceps1,R.drawable.kidmit};

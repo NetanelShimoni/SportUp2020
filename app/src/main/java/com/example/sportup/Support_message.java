@@ -15,7 +15,9 @@ import com.google.firebase.database.DatabaseError;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 import com.google.firebase.database.ValueEventListener;
-
+/**
+ * see all the people that send mesaage to contact and And a mark that we took care of them
+ */
 public class Support_message extends AppCompatActivity {
     private TextView tname,tphone;
     private CheckBox box;

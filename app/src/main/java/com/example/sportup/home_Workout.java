@@ -21,13 +21,15 @@ import java.security.spec.ECField;
 import java.util.ArrayList;
 import java.util.List;
 
+/**
+ * this class represent the screen to the users with all the excersise that the trainers upload
+ */
 public class home_Workout extends AppCompatActivity {
 DatabaseReference exeref;
    public List<Exersice> list;
     Intent intent = getIntent();
     Button back;
    // User user;
-
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {

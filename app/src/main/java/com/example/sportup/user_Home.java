@@ -7,6 +7,9 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.TextView;
 
+/**
+ * screen that the user see when he get into the app
+ */
 public class user_Home extends AppCompatActivity {
 TextView welcome;
     Intent intent ;

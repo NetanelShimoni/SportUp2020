@@ -1,5 +1,8 @@
 package com.example.sportup;
 
+/**
+ * this class is a object of excersise in this app
+ */
 public class Exersice {
     String name_muselce,name, trainer_name, trainer_phone, description,wight,hight,link;
 

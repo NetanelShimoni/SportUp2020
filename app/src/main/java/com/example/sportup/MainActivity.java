@@ -26,6 +26,9 @@ import java.io.FileNotFoundException;
 import java.io.IOException;
 import java.nio.file.Files;
 
+/**
+ * this is the main screen in the app for register
+ */
 public class MainActivity extends AppCompatActivity {
 int SELECT_PHOTO =1;
 Uri uri ;
